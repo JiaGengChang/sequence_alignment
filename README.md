@@ -2,9 +2,10 @@
 A package of dynamic-programming sequence alignment algorithms based on the works of Needleman, Wunsch, and Gotoh.
 
 Reading of Blosum matrices from NCBI website is currently not supported.
+
 Reading of fasta sequences is currently not supported.
 
-## Example (as found in main.java):
+## Example (as found in `main.java`):
 ```
 String x = "MYPMMYPMMYPSCPCQQQG"; // protein sequence 1
 String y = "MYPTCPCGGG"; // protein sequence 2
