@@ -1,5 +1,6 @@
 
-
+// parent class for DP-based alignment algorithms
+// subclass implements its own DP matrices
 public abstract class Align {
     
     protected String x;
@@ -9,7 +10,8 @@ public abstract class Align {
     protected int score;
     protected String x_out;
     protected String y_out;
-    protected String annotation; 
+    protected String annotation;
+    protected int[][] W; //blosum matrix
 
 
     public Align(String x, String y){
@@ -17,6 +19,7 @@ public abstract class Align {
         this.y = y.toUpperCase();
         this.xlen = x.length();
         this.ylen = y.length();
+        this.W = Blosum62.matrix;
     }
 
     public abstract void align_global();

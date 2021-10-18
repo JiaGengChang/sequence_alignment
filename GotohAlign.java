@@ -117,7 +117,7 @@ public class GotohAlign extends Align { // implements Local, Global, Semiglobal 
                                         this.Z[i-1][j ] - 12)) - 2;
 
                 // best score if I match xi and yi
-                int w = Blosum62.matrix[this.x.charAt(i-1)-'A'][this.y.charAt(j-1)-'A'];
+                int w = this.W[this.x.charAt(i-1)-'A'][this.y.charAt(j-1)-'A'];
                 this.Z[i][j] = Math.max(this.X[i-1][j-1],
                                Math.max(this.Y[i-1][j-1],
                                         this.Z[i-1][j-1])) + w;
