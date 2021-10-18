@@ -1,6 +1,19 @@
 # sequence_alignment
-'''
-jgc47@subliminal:~/genomics_I/alignments$  /usr/bin/env /home/jgc47/usr/lib/jvm/jdk-16.0.2+7/bin/java --enable-preview -XX:+ShowCodeDetailsInExceptionMessages -Dfile.encoding=UTF-8 -cp /mhome/stats/s/jgc47/.vscode-server/data/User/workspaceStorage/9d3e80c57ce36e3bd74df0854bc388cc/redhat.java/jdt_ws/alignments_3fcf35a6/bin Main 
+A package of dynamic-programming sequence alignment algorithms based on the works of Needleman, Wunsch, and Gotoh.
+
+Reading of Blosum matrices from NCBI website is currently not supported.
+Reading of fasta sequences is currently not supported.
+
+## Example (as found in main.java):
+```
+String x = "MYPMMYPMMYPSCPCQQQG"; // protein sequence 1
+String y = "MYPTCPCGGG"; // protein sequence 2
+Align gotoh = new GotohAlign(x,y);
+gotoh.all_alignments();
+```
+
+## Output:
+```
 Global alignment:
 MYPMMYPMMYPSCPCQQQG
 |||        :|||:: |
@@ -16,5 +29,4 @@ MYPMMYPMMYPSCPCQQQG
         |||:|||
         MYPTCPCGGG        
 Score: 45
-jgc47@subliminal:~/genomics_I/alignments$ 
-'''
+````
