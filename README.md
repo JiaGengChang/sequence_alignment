@@ -1,6 +1,8 @@
 # sequence_alignment
 A package of dynamic-programming sequence alignment algorithms based on the works of Needleman, Wunsch, and Gotoh.
 
+`GotohAlign` uses affine gap penalties in scoring alignments, while `LinearAlign` uses a linear gap penalty.
+
 Reading of Blosum matrices from NCBI website is currently not supported.
 
 Reading of fasta sequences is currently not supported.
